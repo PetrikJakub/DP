@@ -51,8 +51,6 @@ xArm Python SDK
   - Modified the centroid unit of the `ft_sensor_iden_load` and `ft_sensor_cali_load` interfaces to millimeters (originally meters)
 
 
-- >### [More](ReleaseNotes.md)
-
 
 ## [Example](example/wrapper/)
 
