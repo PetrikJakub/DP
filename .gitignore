@@ -5,9 +5,7 @@ files__pycache__/
 build/
 dist/
 *.egg-info/
-example/test/
-example/wrapper/bak/
-example/wrapper/robot.conf
+example
 bak-xarm/
 .vscode/
 venv
