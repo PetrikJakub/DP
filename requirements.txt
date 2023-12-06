@@ -1,0 +1,2 @@
+setuptools~=68.2.0
+pyueye~=4.96.952
