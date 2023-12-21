@@ -15,7 +15,7 @@ import sys
 import time
 import math
 
-sys.path.append(os.path.join(os.path.dirname(__file__), '../../..'))
+sys.path.append(os.path.join(os.path.dirname(__file__), '../../../..'))
 
 from xarm.wrapper import XArmAPI
 
