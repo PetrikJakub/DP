@@ -110,7 +110,14 @@ def create_image(frame, path):
     # Code for saving the image to the specified path
     cv2.imwrite(path, frame)
     print(f"Image saved at {path}")
-
+#
+# def create_image(frame, path):
+#     # Convert the frame to grayscale
+#     gray_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+#
+#     # Save the grayscale image
+#     cv2.imwrite(path, gray_frame)
+#     print(f"Grayscale Image saved at {path}")
 
 def get_next_folder_number(base_path):
     folders = [folder for folder in os.listdir(base_path) if os.path.isdir(os.path.join(base_path, folder)) and folder.startswith(folder_prefix)]
