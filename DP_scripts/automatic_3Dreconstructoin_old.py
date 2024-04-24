@@ -254,7 +254,7 @@ class RobotMain(object):
                     if not self._check_code(code, 'set_pause_time'):
                         return
                     #function to create and save image
-                    capture_and_save_image(h_cam, mem_ptr, 1280, 720)
+                    capture_and_save_image(h_cam, mem_ptr, 2592, 1944)
 
                     code = self._arm.set_pause_time(1)
                     if not self._check_code(code, 'set_pause_time'):
@@ -272,7 +272,7 @@ class RobotMain(object):
                     if not self._check_code(code, 'set_pause_time'):
                         return
                     # function to create and save image
-                    capture_and_save_image(h_cam, mem_ptr, 1280, 720)
+                    capture_and_save_image(h_cam, mem_ptr, 2592, 1944)
 
                     code = self._arm.set_pause_time(5)
                     if not self._check_code(code, 'set_pause_time'):
