@@ -1,7 +1,7 @@
 import cv2
 from pyueye import ueye
 import numpy as np
-from meshing_script import meshing_proces
+
 
 
 h_cam = ueye.HIDS(0)
@@ -24,8 +24,8 @@ else:
                 print(f"Error setting color mode. Error code: {ret}")
             else:
                 # Set the image size
-                width = 1280
-                height = 720
+                width = 2592
+                height = 1944
                 rect_aoi = ueye.IS_RECT()
                 rect_aoi.s32X = 0
                 rect_aoi.s32Y = 0
