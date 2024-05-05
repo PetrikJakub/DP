@@ -250,15 +250,11 @@ class RobotMain(object):
                         return
 
                     #timer for stabilizating camera
-                    code = self._arm.set_pause_time(2)
-                    if not self._check_code(code, 'set_pause_time'):
-                        return
+                    time.sleep(2)
                     #function to create and save image
                     capture_and_save_image(h_cam, mem_ptr, 2592, 1944)
+                    time.sleep(1)
 
-                    code = self._arm.set_pause_time(1)
-                    if not self._check_code(code, 'set_pause_time'):
-                        return
 
                 # Loop through the target angles for the higher circle and set them using the arm
                 for angle in higher_target_positions:
@@ -268,15 +264,11 @@ class RobotMain(object):
                         return
 
                     # timer for stabilizating camera
-                    code = self._arm.set_pause_time(5)
-                    if not self._check_code(code, 'set_pause_time'):
-                        return
+                    time.sleep(5)
                     # function to create and save image
                     capture_and_save_image(h_cam, mem_ptr, 2592, 1944)
 
-                    code = self._arm.set_pause_time(5)
-                    if not self._check_code(code, 'set_pause_time'):
-                        return
+                    time.sleep(5)
 
                 # end of shooting positions
                 code = self._arm.set_servo_angle(angle=[0.0, 0.0, 0.0, 0.0, 0.0, 0.0], speed=self._angle_speed,
