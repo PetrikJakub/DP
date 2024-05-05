@@ -115,7 +115,7 @@ class RobotMain(object):
             # Timer for stabilizing camera
             time.sleep(3)
             # Function to create and save image
-            capture_and_save_image(h_cam, mem_ptr, 2592, 1944)
+            capture_and_save_image(h_cam, mem_ptr, 1920, 1080)
             time.sleep(3)
 
 

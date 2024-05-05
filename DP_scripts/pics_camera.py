@@ -40,8 +40,8 @@ def initialize_camera():
                 return None, None, None
 
             # Set the image size
-            width = 2592
-            height = 1944
+            width = 1920
+            height = 1080
             rect_aoi = ueye.IS_RECT()
             rect_aoi.s32X = 0
             rect_aoi.s32Y = 0
