@@ -3,7 +3,7 @@
 ## Overview
 This project is the practical part of the master thesis entitled - The use of a collaborative robot in machine vision tasks.
 
-All steps for hardware and software integration are included in the <mark>user_manual.pdf</mark>
+All steps for hardware and software integration are included in the <b>user_manual.pdf</b>.
 
 ## Installation
 - download
