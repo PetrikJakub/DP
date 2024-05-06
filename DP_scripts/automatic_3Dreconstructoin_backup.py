@@ -123,11 +123,11 @@ class RobotMain(object):
 
     def run_sequence(self, h_cam, mem_ptr):
         sequences = [
-            [-1.6, 51.4, 87.7, 0.1, 36.9, 80.7],
-            [-13.3, 41.5, 98.8, 23.9, 65.3, 57.3],
-            [-26.0, 55.3, 137.5, 33.1, 99.4, 56.6],
-            [-28.8, 57.5, 129.1, 30.0, 90.8, 48.6],
-            [-19.2, 56.3, 97.8, 3.7, 43.1, 60.4]
+            [23.8, 62.9, 100.9, 0.5, 38.7, 105.8],
+            [4.4, 37.2, 89.8, 39.6, 57.7, 63.3],
+            [-5, 34.7, 95.5, 46.5, 73.4, 58],
+            [1.3, 45.1, 84.8, 34, 45.4, 58.1],
+            [7.5, 52.9, 86.1, 14.4, 33.8, 77.8]
         ]
 
         for sequence in sequences:
@@ -143,7 +143,10 @@ class RobotMain(object):
             self._arm.reset()
 
             i = int(1)
-
+            code = self._arm.set_servo_angle(angle=[58.3, 42.0, 66.6, 1.4, 25.0, 139.4], speed=self._angle_speed,
+                                             mvacc=self._angle_acc, wait=True, radius=0.0)
+            if not self._check_code(code, 'set_servo_angle'):
+                return
             #turning on rolling plate
             code = self._arm.set_cgpio_digital(0, 1, delay_sec=0)
             if not self._check_code(code, 'set_cgpio_digital'):
@@ -154,7 +157,10 @@ class RobotMain(object):
             code = self._arm.set_cgpio_digital(0, 0, delay_sec=0)
             if not self._check_code(code, 'set_cgpio_digital'):
                 return
-
+            code = self._arm.set_servo_angle(angle=[58.3, 42.0, 66.6, 1.4, 25.0, 139.4], speed=self._angle_speed,
+                                             mvacc=self._angle_acc, wait=True, radius=0.0)
+            if not self._check_code(code, 'set_servo_angle'):
+                return
             self._arm.reset()
 
         except Exception as e:
