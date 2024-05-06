@@ -17,6 +17,13 @@ All steps for hardware and software integration are included in the <b>user_manu
   ```bash
   python setup.py install
   ```
+    ```bash
+  pip install opencv-python
+  ```
+    ```bash
+  pip install pyueye
+  ```
+  - run exe file for camera uEye: https://drive.google.com/file/d/1boLgXkEwFl0s9LGgpVz3ZeHLtyLELFpa/view?usp=sharing
 ## Installation xArm-Python-SDK
 &ensp;&ensp;In case you want to use only original xArm-Python-SDK, visit following link:
 
